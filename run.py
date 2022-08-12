@@ -41,4 +41,17 @@ Choose an Option:
     except ValueError:
         print()
 
+
 show_menu()
+
+
+def signup():
+    print("Please enter the username:")
+    username = input("Username:  ")
+    print("Please enter a password:")
+    password = stdiomask.getpass(prompt="Password:  ", mask='*')
+
+
+signup()
+
+
