@@ -1,57 +1,18 @@
-import gspread
-from google.oauth2.service_account import Credentials
+import datetime
 
 
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-from os import system
-from colorama import init, Fore, Back, Style
-from getpass import getpass
-import stdiomask
-from time import sleep
-init(autoreset=True)
-
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('task-tracker')
-
-
-def show_menu():
-    """
-    Show the options menu to the user
-    """
-    print(Fore.GREEN + 
-    """
-    *********************************************************************
-                        Welcome to your Task Manager
-    *********************************************************************        
-Choose an Option:
-[1] Sign up
-[2] Log in
-[3] Exit (or type Enter) 
-""")
-    try:
-        opcao = int(input('Digite sua opção: '))
-        return(opcao)
-    except ValueError:
-        print()
-
-
-show_menu()
-
-
-def signup():
-    print("Please enter the username:")
-    username = input("Username:  ")
-    print("Please enter a password:")
-    password = stdiomask.getpass(prompt="Password:  ", mask='*')
-
-
-signup()
-
+# pssd means password, ussnm is username
+def user_information(ussnm, pssd):
+	name = input("Enter your full name: ")
+	email_address = (input("Enter your email address: "))+'\n'
+	ussnm_ = ussnm+" task.txt"
+	f = open(ussnm_, 'a')
+	f.write(pssd)
+	f.write("\nName: ")
+	f.write(name)
+	f.write('\n')
+	f.write("Email Address: ")
+	f.write(email_address)
+	f.write('\n')
+	f.close()
 
