@@ -1,7 +1,11 @@
 import datetime
 
+'''
+I have borrowed this code from this tutorial: https://www.geeksforgeeks.org/personalized-task-manager-in-python/
+I have also customized some of the code to achieve the project goals.
+'''
 
-# pssd means password, ussnm is username
+# Function that requires the users data and creates a txt file of it. 
 def user_information(ussnm, pssd):
 	name = input("Enter your full name: ")
 	email_address = (input("Enter your email address: "))+'\n'
