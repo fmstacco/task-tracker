@@ -65,3 +65,10 @@ def add_task_worksheet(data):
     print("Task added successfully\n")
   
 
+def main():
+    """
+    Run all program functions
+    """
+
+data = get_tasks_data()
+add_task_worksheet(data)
