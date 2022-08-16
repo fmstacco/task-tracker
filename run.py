@@ -53,5 +53,15 @@ def validate_data(values):
     
     return True
 
+
+def add_task_worksheet(data):
+    """
+    Update task worksheet, add new row with the list data provided
+
+    """
+    print("Adding task to your worksheet...\n")
+    task_worksheet = SHEET.worksheet("tasks")
+    task_worksheet.append_row(data)
+    print("Task added successfully\n")
   
-get_tasks_data()
+
