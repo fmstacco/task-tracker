@@ -1,5 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -21,17 +24,17 @@ def get_tasks_data():
     by commas. The loop will repeatedly request data, until it is valid.
     """
     while True:
-        print("Please add a task to your to do list.")
-        print("Data should be separated by commas.")
-        print("Example: Today's Date, Task, Category, Due Date")
-        print("Example: 28/07/22, Plan project portfolio 3, Studies, 20/08/22")
+        print("Please add a task to your to do list.\n")
+        print("Data should be separated by commas.\n")
+        print("Example: Today's Date, Task, Category, Due Date\n")
+        print("Example: 28/07/22, Plan project, Studies, 20/08/22\n")
 
-        data_str = input("Add your task here:\n")
+        data_str = input("Add your task here:")
 
         tasks_data = data_str.split(",")
 
         if validate_data(tasks_data):
-            print('Data is Valid!')
+            print('Data is Valid!\n')
             break
 
     return tasks_data
@@ -63,12 +66,22 @@ def add_task_worksheet(data):
     task_worksheet = SHEET.worksheet("tasks")
     task_worksheet.append_row(data)
     print("Task added successfully\n")
-  
+
 
 def main():
     """
     Run all program functions
     """
+    data = get_tasks_data()
+    add_task_worksheet(data)
+    show_tasks()
 
-data = get_tasks_data()
-add_task_worksheet(data)
+        
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+    "********************************************************************")
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+    "               Welcome to Carpe Diem Task Manager                    ")
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+    "********************************************************************\n")
+main()
+
