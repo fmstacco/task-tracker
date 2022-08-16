@@ -16,6 +16,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
+
 def get_tasks_data():
     """
     Get tasks data.
@@ -68,20 +69,38 @@ def add_task_worksheet(data):
     print("Task added successfully\n")
 
 
-def main():
+def welcome_screen():
     """
-    Run all program functions
+    Welcome screen with initial instructions to the user
     """
     data = get_tasks_data()
     add_task_worksheet(data)
-    show_tasks()
+    
+       
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 
+"****************************************************************************")
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+        "               Welcome to Carpe Diem Task Manager                    ")
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+        "****************************************************************************\n") 
+print("In this system you can better organize yourself")
+print("by listing all the tasks you need to do.\n")
 
-        
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-    "********************************************************************")
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-    "               Welcome to Carpe Diem Task Manager                    ")
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-    "********************************************************************\n")
-main()
+while True:
+    print("To get started, please choose an option below:\n")
+    print("[1] Create a new task list")
+    print("[2] Access a saved task list\n")
+
+    type = input("Please enter your choice here: \n")
+
+    if type == "1":
+        new_user()
+        break
+    elif type == "2":
+        returning_user()
+        break
+    else:
+        print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
+
+welcome_screen()
 
