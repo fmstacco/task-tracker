@@ -14,7 +14,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task-tracker')
-
+stored_data = SHEET.worksheet('database')
 
 def get_tasks_data():
     """
@@ -29,7 +29,7 @@ def get_tasks_data():
         print("Example: Today's Date, Task, Category, Due Date\n")
         print("Example: 28/07/22, Plan project, Studies, 20/08/22\n")
 
-        data_str = input("Add your task here:")
+        data_str = input("Add your task here: \n")
 
         tasks_data = data_str.split(",")
 
@@ -63,7 +63,7 @@ def add_task_worksheet(data):
 
     """
     print("Adding task to your worksheet...\n")
-    task_worksheet = SHEET.worksheet("tasks")
+    task_worksheet = SHEET.worksheet("database")
     task_worksheet.append_row(data)
     print("Task added successfully\n")
 
