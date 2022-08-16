@@ -17,6 +17,9 @@ SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
 
+
+
+
 def get_tasks_data():
     """
     Get tasks data.
@@ -67,6 +70,32 @@ def add_task_worksheet(data):
     task_worksheet = SHEET.worksheet("database")
     task_worksheet.append_row(data)
     print("Task added successfully\n")
+
+def new_user():
+    """
+       This function will register the new user and send the data to the first column of the Database spreadsheet.
+    """
+    while True:
+        print("\nWe are glad to have you here!\n")
+        print("Lets create a username for you!\n")
+        print("Usernames must be between 2 and 10 characters,")
+        print("and should contain only letters from a to z.\n")
+
+        global username
+        username = input("Enter your username here:\n")
+
+        if stored_data.find(username, in_column=1):
+            print(Fore.LIGHTYELLOW_EX +
+                  "\nSorry, that username has already been taken.")
+            print(Fore.LIGHTYELLOW_EX +
+                  "Please choose an alternative username.\n")
+        elif username.isalpha() and len(username) > 1 and len(username) < 11:
+            welcome_user()
+            break
+        else:
+            print(Fore.LIGHTYELLOW_EX +
+                  "\nThe username you have entered is not valid, \
+please try again.\n")
 
 
 def welcome_screen():
