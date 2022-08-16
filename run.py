@@ -37,3 +37,21 @@ def get_tasks_data():
     return tasks_data
 
 
+def validate_data(values):
+    """
+    Inside the try, verifies if data provided are exactly 4 values.
+    Raises ValueError if there aren't exactly 4 values.
+    """
+    try:
+        if len(values) != 4:
+            raise ValueError(
+                f"Exactly 4 values required, you provided {len(values)}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+    
+    return True
+
+  
+get_tasks_data()
