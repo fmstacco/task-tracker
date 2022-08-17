@@ -16,15 +16,11 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
-
-
-
 def new_user():
     """
        This function will register the new user and send the data to the first column of the Database spreadsheet.
     """
     while True:
-        print("\nWe are glad to have you here!\n")
         print("Lets create a username for you!\n")
         print("Usernames must be between 2 and 10 characters,")
         print("and should contain only letters from a to z.\n")
@@ -90,13 +86,16 @@ def add_new_task():
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Hello {username}, Please add a task to your to do list.\n")
       
+        task_code = input("Enter a task code: 'todays date + time' \
+            example:\n '17/08/22 3:17pm', type: '1708221517': \n")
         todays_date = input("Today's date: \n")
         task = input("New task: \n")
         category = input("Category: \n")
         due_date = input("Due Date: \n")
+        status = input("Status - example: 'to do', 'doing', 'done': \n") 
         
-        list_details = [username, todays_date, task, category, due_date]
-        print("Saving your details...\n")
+        list_details = [username, task_code, todays_date, task, category, due_date, status]
+        print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
         database.append_row(list_details)
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
