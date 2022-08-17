@@ -86,13 +86,18 @@ def add_new_task():
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Hello {username}, Please add a task to your to do list.\n")
       
-        task_code = input("Enter a task code: 'todays date + time' \
-            example:\n '17/08/22 3:17pm', type: '1708221517': \n")
-        todays_date = input("Today's date: \n")
-        task = input("New task: \n")
-        category = input("Category: \n")
-        due_date = input("Due Date: \n")
-        status = input("Status - example: 'to do', 'doing', 'done': \n") 
+        print("Please, enter a task code: 'todays date + time' \
+            \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
+        task_code = input("1Task code: \n")
+        todays_date = input("\nToday's date: \n")
+        task = input("\nNew task: \n")
+        category = input("\nCategory: \n")
+        due_date = input("\nDue Date: \n")
+        print("\nType the status of your task \
+            \n [1] to do \
+            \n [2] doing \
+            \n [3] done\n")
+        status = input("Status: \n") 
         
         list_details = [username, task_code, todays_date, task, category, due_date, status]
         print("Saving your task on the database...\n")
@@ -109,7 +114,8 @@ def welcome_screen():
     """
     Welcome screen with initial instructions to the user
     """
-          
+
+
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 
 "****************************************************************************")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
