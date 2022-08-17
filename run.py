@@ -17,56 +17,6 @@ SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
 
-def get_tasks_data():
-    """
-    Get tasks data.
-    Run a while loop to add a valid string of data from the user
-    via the terminal, which must be 4 strings separated
-    by commas. The loop will repeatedly request data, until it is valid.
-    """
-    while True:
-        print("Please add a task to your to do list.\n")
-        print("Data should be separated by commas.\n")
-        print("Example: Today's Date, Task, Category, Due Date\n")
-        print("Example: 28/07/22, Plan project, Studies, 20/08/22\n")
-
-        data_str = input("Add your task here: \n")
-
-        tasks_data = data_str.split(",")
-
-        if validate_data(tasks_data):
-            print('Data is Valid!\n')
-            break
-
-    return tasks_data
-
-
-def validate_data(values):
-    """
-    Inside the try, verifies if data provided are exactly 4 values.
-    Raises ValueError if there aren't exactly 4 values.
-    """
-    try:
-        if len(values) != 4:
-            raise ValueError(
-                f"Exactly 4 values required, you provided {len(values)}"
-            )
-    except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
-        return False
-    
-    return True
-
-
-def add_task_worksheet(data):
-    """
-    Update task worksheet, add new row with the list data provided
-
-    """
-    print("Adding task to your worksheet...\n")
-    task_worksheet = SHEET.worksheet("database")
-    task_worksheet.append_row(data)
-    print("Task added successfully\n")
 
 
 def new_user():
@@ -112,6 +62,7 @@ Hello {username}, Welcome to Carpe Diem Task Manager!\n")
         answer = input("Enter your option here:\n")
         if answer == "1":
             add_new_task()
+            
             break
         elif answer == "2":
             view_saved_tasks()
@@ -127,14 +78,39 @@ Many thanks for using the Carpe Diem Task Manager. We're looking forward to seei
             print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")
 
 
+def add_new_task():
+    """
+     Add a new task to the database.
+     Run a while loop to add a valid string of data from the user
+     via the terminal, which must be 4 strings separated
+     by commas. The loop will repeatedly request data, until it is valid.
+    """
+
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+Hello {username}, Please add a task to your to do list.\n")
+      
+        todays_date = input("Today's date: \n")
+        task = input("New task: \n")
+        category = input("Category: \n")
+        due_date = input("Due Date: \n")
+        
+        list_details = [username, todays_date, task, category, due_date]
+        print("Saving your details...\n")
+        database = SHEET.worksheet('database')
+        database.append_row(list_details)
+        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+Great {username}, Your task was added to Carpe Diem Task Manager.\n")
+        print("\nTaking you to the main menu...")
+        welcome_user()
+        break
+
+
 def welcome_screen():
     """
     Welcome screen with initial instructions to the user
     """
-    data = get_tasks_data()
-    add_task_worksheet(data)
-    
-       
+          
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 
 "****************************************************************************")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
