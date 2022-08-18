@@ -13,6 +13,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
+from datetime import datetime
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
@@ -44,7 +45,7 @@ Hello {username}, Welcome to Carpe Diem Task Manager!\n")
         print("Type '1' to add a new task.")
         print("Type '2' to exit the task manager.\n")
 
-        answer = input("Enter your option here:\n")
+        answer = input("\nEnter your option here: \n")
         if answer == "1":
             add_new_task()
             break
@@ -68,7 +69,7 @@ def welcome_user():
         print("Type '3' to delete a task .")
         print("Type '4' to exit the task manager.\n")
 
-        answer = input("Enter your option here:\n")
+        answer = input("\nEnter your option here: \n")
         if answer == "1":
             add_new_task()
             
@@ -99,7 +100,7 @@ Lets add a task to your to do list.\n")
       
         print("First lets create a task task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
-        task_code = input("Task code: \n")
+        task_code = input("\nTask code: \n")
         
         if task_code == "":
             print(Fore.LIGHTYELLOW_EX + "Please, type a task code.\n")
@@ -111,7 +112,7 @@ Lets add a task to your to do list.\n")
             \n [1] to do \
             \n [2] doing \
             \n [3] done\n")
-        status = input("Status: \n") 
+        status = input("\nStatus: \n") 
         
         list_details = [username, task_code, todays_date, task_description, due_date, status]
         print("Saving your task on the database...\n")
@@ -146,7 +147,7 @@ def welcome_returning_user():
     print("or type 'n' to create a new username:")
     while True:
         global username
-        username = input("Enter your username here:\n")
+        username = input("\nEnter your username here:\n")
 
         if username == 'n' or username == 'N':
             new_user()
@@ -170,7 +171,7 @@ def new_user():
         print("and should contain only letters from a to z.\n")
 
         global username
-        username = input("Enter your username here:\n")
+        username = input("\nEnter your username here: \n")
 
         if stored_data.find(username, in_column=1):
             print(Fore.LIGHTYELLOW_EX +
@@ -206,7 +207,7 @@ while True:
     print("[1] Create a new task list")
     print("[2] Access a saved task list\n")
 
-    option = input("Please enter your choice here: \n")
+    option = input("\nPlease enter your choice here: \n")
 
     if option == "1":
         new_user()
