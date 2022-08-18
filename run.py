@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import pandas as pd
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
@@ -16,12 +17,13 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
+
 def new_user():
     """
        This function will register the new user and send the data to the first column of the Database spreadsheet.
     """
     while True:
-        print("Lets create a username for you!\n")
+        print("\nLet's create a username for you!\n")
         print("Usernames must be between 2 and 10 characters,")
         print("and should contain only letters from a to z.\n")
 
@@ -84,11 +86,11 @@ def add_new_task():
 
     while True:
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
-Hello {username}, Please add a task to your to do list.\n")
+Lets add a task to your to do list.\n")
       
-        print("Please, enter a task code: 'todays date + time' \
+        print("First lets create a Please, enter a task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
-        task_code = input("1Task code: \n")
+        task_code = input("Task code: \n")
         todays_date = input("\nToday's date: \n")
         task = input("\nNew task: \n")
         category = input("\nCategory: \n")
@@ -105,9 +107,22 @@ Hello {username}, Please add a task to your to do list.\n")
         database.append_row(list_details)
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Great {username}, Your task was added to Carpe Diem Task Manager.\n")
-        print("\nTaking you to the main menu...")
-        welcome_user()
+        print("\nLets see your saved tasks...")
+        view_saved_tasks()
+        welcome_screen()
         break
+
+
+def view_saved_tasks():
+    """
+    Allows the user to see the saved tasks.
+    """
+    if stored_data.find(username, in_column=1):
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+              "\nThe tasks you currently have saved are:\n")
+        df = pd.DataFrame(stored_data.get_all_records())
+        user_record = df.loc[df['username'] == username].to_string(index=False)
+        print(f"{Fore.LIGHTCYAN_EX }{Style.BRIGHT}\n{user_record}\n")    
 
 
 def welcome_screen():
