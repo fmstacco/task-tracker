@@ -1,3 +1,15 @@
+# Carpe Diem Task Manager
+# By Fabiana Martins de Souza Tacco
+# https://github.com/fmstacco/
+
+"""This code was developed having as a main inspiration the following \
+\nrepository:https://github.com/frankiesanjana/mortgage-calculator.\
+\nI borrowed some of the code from this repository to help create the task\
+\nmanager.I have also customized some of the code to achieve the project goals.
+"""
+
+# imports
+
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
