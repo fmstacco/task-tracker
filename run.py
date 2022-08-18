@@ -30,30 +30,7 @@ SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
 
-def new_user():
-    """
-       This function will register the new user and send the data to the first column of the Database spreadsheet.
-    """
-    while True:
-        print("\nLet's create a username for you!\n")
-        print("Usernames must be between 2 and 10 characters,")
-        print("and should contain only letters from a to z.\n")
 
-        global username
-        username = input("Enter your username here:\n")
-
-        if stored_data.find(username, in_column=1):
-            print(Fore.LIGHTYELLOW_EX +
-                  "\nSorry, that username has already been taken.")
-            print(Fore.LIGHTYELLOW_EX +
-                  "Please choose an alternative username.\n")
-        elif username.isalpha() and len(username) > 1 and len(username) < 11:
-            welcome_new_user()
-            break
-        else:
-            print(Fore.LIGHTYELLOW_EX +
-                  "\nThe username you have entered is not valid, \
-please try again.\n")
 
 
 def welcome_new_user():
@@ -73,7 +50,7 @@ Hello {username}, Welcome to Carpe Diem Task Manager!\n")
             break
         elif answer == "2":
             print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\n\
-Goodbye {username}. We're looking forward to seeing you again!")
+Goodbye {username}. We're looking forward to seeing you again!/n")
             break
         else:
             print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")        
@@ -160,6 +137,55 @@ def view_saved_tasks():
         print("\nTaking you to the main menu...")    
         welcome_user()
 
+
+def welcome_returning_user():
+    """
+       Welcome screen for returning users
+    """
+    print("\nWelcome back! Please enter your username,")
+    print("or type 'n' to create a new username:")
+    while True:
+        global username
+        username = input("Enter your username here:\n")
+
+        if username == 'n' or username == 'N':
+            new_user()
+            break
+        elif stored_data.find(username, in_column=1):
+            print("\nTaking you to the main menu...")
+            welcome_user()
+            break
+        else:
+            print(Fore.LIGHTYELLOW_EX +
+                  "\nUsername not found, please try again.")
+
+
+def new_user():
+    """
+       This function will register the new user and send the data to the first column of the Database spreadsheet.
+    """
+    while True:
+        print("\nLet's create a username for you!\n")
+        print("Usernames must be between 2 and 10 characters,")
+        print("and should contain only letters from a to z.\n")
+
+        global username
+        username = input("Enter your username here:\n")
+
+        if stored_data.find(username, in_column=1):
+            print(Fore.LIGHTYELLOW_EX +
+                  "\nSorry, that username has already been taken.")
+            print(Fore.LIGHTYELLOW_EX +
+                  "Please choose an alternative username.\n")
+        elif username.isalpha() and len(username) > 1 and len(username) < 11:
+            welcome_new_user()
+            break
+        else:
+            print(Fore.LIGHTYELLOW_EX +
+                  "\nThe username you have entered is not valid, \
+please try again.\n")
+
+
 def welcome_screen():
     """
     Welcome screen with initial instructions to the user
@@ -180,16 +206,17 @@ while True:
     print("[1] Create a new task list")
     print("[2] Access a saved task list\n")
 
-    type = input("Please enter your choice here: \n")
+    option = input("Please enter your choice here: \n")
 
-    if type == "1":
+    if option == "1":
         new_user()
         break
-    elif type == "2":
-        returning_user()
+    elif option == "2":
+        welcome_returning_user()
         break
     else:
         print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
+
 
 welcome_screen()
 
