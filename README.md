@@ -16,11 +16,37 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 * [**Testing**](<#testing>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
-    * [**Content**](<#content>)
     * [**Code**](<#code>)
 *  [**Acknowledgements**](<#acknowledgements>)
 
+# Credits 
 
+* [Alura](https://www.alura.com.br/) to reinforce learning on Python.
+
+* [Code Institute Python Project template](https://github.com/Code-Institute-Org/python-essentials-template-v1) - the framework for this project.
+
+* [Youtube Gustavo Guanabara](https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6) - to reinforce learning on Python.
+
+* [Personalized task manager in Python](https://www.geeksforgeeks.org/personalized-task-manager-in-python/) - inspired me to structure my project.
+
+* [Create a Task Tracker](https://www.youtube.com/watch?v=ynd67UwG_cI&t=351s) - inspired me to structure my project.
+
+
+
+
+## Code
+
+* [The WebShala Youtube channel](https://www.youtube.com/watch?v=J8QbjXdVl9c&list=PLJAFEg3vkcQN6NGwzI0KX_ZC6dLQjkfeU) - the code of this project comes mainly from this tutorial on Youtube from The WebShala channel. I decided to choose The WebShala tutorial over the inspirations mentioned below as I could follow the Youtube tutorial and understand every step and also because they taught how to use questions and options randomly.  
+
+* [Simple Personality Quiz](https://github.com/edubz99/Simple-Personality-Quiz) - this repository was also among my initial inspirations for the quiz. 
+
+* [Youtube Code Feature](https://www.youtube.com/watch?v=XnH56whHQqw) - this tutorial was my first inspiration for the quiz. I even deployed the walkthrough I have done following this tutorial. However, I ended up choosing the WebShala tutorial, as this one uses the HTML as a database for the questions, not a separated file on JavaScript. 
+
+* [Sweet Alert](https://sweetalert.js.org/) - the code for the alert for the unsuccessful form submission.
+
+* [EmailJS](https://www.emailjs.com) - the code to make the form effective for submitting potential clients' data to my email.  
+
+[Back to top](<#contents>)
 
 # Acknowledgements
 
