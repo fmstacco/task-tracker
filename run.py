@@ -128,7 +128,7 @@ Lets add a task to your to do list.\n")
             print(Fore.LIGHTYELLOW_EX + "Please, type a task code.\n")
 
         todays_date = input("\nToday's date: \n")
-        task = input("\nNew task: \n")
+        task_description = input("\nNew task: \n")
         due_date = input("\nDue Date: \n")
         print("\nType the status of your task \
             \n [1] to do \
@@ -136,7 +136,7 @@ Lets add a task to your to do list.\n")
             \n [3] done\n")
         status = input("Status: \n") 
         
-        list_details = [username, task_code, todays_date, task, due_date, status]
+        list_details = [username, task_code, todays_date, task_description, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
         database.append_row(list_details)
