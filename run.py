@@ -76,7 +76,36 @@ Hello {username}, Welcome to Carpe Diem Task Manager!\n")
 Goodbye {username}. We're looking forward to seeing you again!")
             break
         else:
-            print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")
+            print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")        
+
+
+def welcome_user():
+    """
+    Main menu for the task manager
+    """
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+{username}, please choose an option below\n")
+        print("Type '1' to add a new task.")
+        print("Type '2' to view your saved tasks.")
+        print("Type '3' to delete a task .")
+        print("Type '4' to exit the task manager.\n")
+
+        answer = input("Enter your option here:\n")
+        if answer == "1":
+            add_new_task()
+            
+            break
+        elif answer == "2":
+            view_saved_tasks()
+            break
+        elif answer == "3":
+            delete_task()
+            break
+        elif answer == "4":
+            print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\n\
+Goodbye {username}. We're looking forward to seeing you again!.")
+            break
 
 
 def add_new_task():
@@ -91,12 +120,15 @@ def add_new_task():
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Lets add a task to your to do list.\n")
       
-        print("First lets create a Please, enter a task code: 'todays date + time' \
+        print("First lets create a task task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
         task_code = input("Task code: \n")
+        
+        if task_code == "":
+            print(Fore.LIGHTYELLOW_EX + "Please, type a task code.\n")
+
         todays_date = input("\nToday's date: \n")
         task = input("\nNew task: \n")
-        category = input("\nCategory: \n")
         due_date = input("\nDue Date: \n")
         print("\nType the status of your task \
             \n [1] to do \
@@ -104,7 +136,7 @@ Lets add a task to your to do list.\n")
             \n [3] done\n")
         status = input("Status: \n") 
         
-        list_details = [username, task_code, todays_date, task, category, due_date, status]
+        list_details = [username, task_code, todays_date, task, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
         database.append_row(list_details)
@@ -112,7 +144,6 @@ Lets add a task to your to do list.\n")
 Great {username}, Your task was added to Carpe Diem Task Manager.\n")
         print("\nLets see your saved tasks...")
         view_saved_tasks()
-        welcome_screen()
         break
 
 
@@ -125,8 +156,9 @@ def view_saved_tasks():
               "\nThe tasks you currently have saved are:\n")
         df = pd.DataFrame(stored_data.get_all_records())
         user_record = df.loc[df['username'] == username].to_string(index=False)
-        print(f"{Fore.LIGHTCYAN_EX }{Style.BRIGHT}\n{user_record}\n")    
-
+        print(f"{Fore.LIGHTCYAN_EX }{Style.BRIGHT}\n{user_record}\n")
+        print("\nTaking you to the main menu...")    
+        welcome_user()
 
 def welcome_screen():
     """
