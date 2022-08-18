@@ -3,7 +3,7 @@
 # https://github.com/fmstacco/
 
 """This code was developed having as a main inspiration the following \
-\nrepository:https://github.com/frankiesanjana/mortgage-calculator.\
+\nrepository: https://github.com/frankiesanjana/mortgage-calculator.\
 \nI borrowed some of the code from this repository to help create the task\
 \nmanager.I have also customized some of the code to achieve the project goals.
 """
@@ -48,7 +48,7 @@ def new_user():
             print(Fore.LIGHTYELLOW_EX +
                   "Please choose an alternative username.\n")
         elif username.isalpha() and len(username) > 1 and len(username) < 11:
-            welcome_user()
+            welcome_new_user()
             break
         else:
             print(Fore.LIGHTYELLOW_EX +
@@ -56,7 +56,7 @@ def new_user():
 please try again.\n")
 
 
-def welcome_user():
+def welcome_new_user():
     """
     Main menu for the task manager
     """
@@ -65,24 +65,15 @@ def welcome_user():
 Hello {username}, Welcome to Carpe Diem Task Manager!\n")
         print("Please choose an option below:\n")
         print("Type '1' to add a new task.")
-        print("Type '2' to view your saved tasks.")
-        print("Type '3' to delete a task .")
-        print("Type '4' to exit the task manager.\n")
+        print("Type '2' to exit the task manager.\n")
 
         answer = input("Enter your option here:\n")
         if answer == "1":
             add_new_task()
-            
             break
         elif answer == "2":
-            view_saved_tasks()
-            break
-        elif answer == "3":
-            delete_task()
-            break
-        elif answer == "4":
             print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\n\
-Many thanks for using the Carpe Diem Task Manager. We're looking forward to seeing you again, {username}.")
+Goodbye {username}. We're looking forward to seeing you again!")
             break
         else:
             print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")
