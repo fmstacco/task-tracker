@@ -127,18 +127,27 @@ def delete_task():
     """
     Allows the user to delete a saved task.
     """
+    while True:
     
-    print("Type the task code you want to delete:")
-    code_delete = input("task code: \n")
-    row = stored_data.find(code_delete, in_column=2).row
-    print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-              "\nWe found the task in our database.\n")
-    print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-              "\nLet's delete it.\n")      
-    database = SHEET.worksheet('database')
-    database.delete_rows(row)
-    print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+        print("Type the task code you want to delete:")
+        code_delete = input("task code: \n")
+        if stored_data.find(code_delete, in_column=2):
+            row = stored_data.find(code_delete, in_column=2).row
+            print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+                "\nWe found the task in our database.\n")
+            print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+                "\nLet's delete it.\n")      
+            database = SHEET.worksheet('database')
+            database.delete_rows(row)
+            print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Great {username}, Your task was deleted from Carpe Diem Task Manager.\n")
+            print("\nTaking you to the main menu...")
+            welcome_user()
+            break
+        else:
+            print(Fore.LIGHTYELLOW_EX +
+                    "\nTask not found, please try again.")
+            
 
 
 def view_saved_tasks():
