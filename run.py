@@ -32,8 +32,6 @@ stored_data = SHEET.worksheet('database')
 
 
 
-
-
 def welcome_new_user():
     """
     Main menu for the task manager
@@ -72,7 +70,6 @@ def welcome_user():
         answer = input("\nEnter your option here: \n")
         if answer == "1":
             add_new_task()
-            
             break
         elif answer == "2":
             view_saved_tasks()
@@ -114,6 +111,7 @@ Lets add a task to your to do list.\n")
             \n [3] done\n")
         status = input("\nStatus: \n") 
         
+        
         list_details = [username, task_code, todays_date, task_description, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
@@ -124,6 +122,20 @@ Great {username}, Your task was added to Carpe Diem Task Manager.\n")
         view_saved_tasks()
         break
 
+
+def delete_task():
+    """
+    Allows the user to delete a saved task.
+    """
+    
+    print("Type the task code you want to delete:")
+    code_delete = input("task code: \n")
+    row = stored_data.find(code_delete, in_column=2).row
+    print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+              "\nWe found the task in our database.\n")
+    print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+              "\nLet's delete it.\n")      
+    print(row)
 
 def view_saved_tasks():
     """
@@ -220,4 +232,5 @@ while True:
 
 
 welcome_screen()
+
 
