@@ -124,9 +124,13 @@ def delete_task():
     Allows the user to delete a saved task.
     """
     while True:
-        print("Type the task code you want to delete:")
+        print("Type the task code you want to delete,\
+        \nor type 'm' to return to the main menu:\n")
         code_delete = input("task code: \n")
-        if stored_data.find(code_delete, in_column=2):
+        if code_delete == 'm' or code_delete == 'M':
+            welcome_user()
+            break
+        elif stored_data.find(code_delete, in_column=2):
             row = stored_data.find(code_delete, in_column=2).row
             print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
                 "\nWe found the task in our database.\n")
