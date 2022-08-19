@@ -31,7 +31,6 @@ SHEET = GSPREAD_CLIENT.open('task-tracker')
 stored_data = SHEET.worksheet('database')
 
 
-
 def welcome_new_user():
     """
     Main menu for the task manager
@@ -52,7 +51,7 @@ Hello {username}, Welcome to Carpe Diem Task Manager!\n")
 Goodbye {username}. We're looking forward to seeing you again!/n")
             break
         else:
-            print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")        
+            print(Fore.LIGHTYELLOW_EX + "Please, choose a valid option.\n")
 
 
 def welcome_user():
@@ -94,11 +93,10 @@ def add_new_task():
     while True:
         print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
 Lets add a task to your to do list.\n")
-      
         print("First lets create a task task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
         task_code = input("\nTask code: \n")
-        
+
         if task_code == "":
             print(Fore.LIGHTYELLOW_EX + "Please, type a task code.\n")
 
@@ -109,9 +107,7 @@ Lets add a task to your to do list.\n")
             \n [1] to do \
             \n [2] doing \
             \n [3] done\n")
-        status = input("\nStatus: \n") 
-        
-        
+        status = input("\nStatus: \n")
         list_details = [username, task_code, todays_date, task_description, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
@@ -128,7 +124,6 @@ def delete_task():
     Allows the user to delete a saved task.
     """
     while True:
-    
         print("Type the task code you want to delete:")
         code_delete = input("task code: \n")
         if stored_data.find(code_delete, in_column=2):
@@ -136,7 +131,7 @@ def delete_task():
             print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
                 "\nWe found the task in our database.\n")
             print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-                "\nLet's delete it.\n")      
+                "\nLet's delete it.\n")
             database = SHEET.worksheet('database')
             database.delete_rows(row)
             print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
@@ -147,7 +142,6 @@ Great {username}, Your task was deleted from Carpe Diem Task Manager.\n")
         else:
             print(Fore.LIGHTYELLOW_EX +
                     "\nTask not found, please try again.")
-            
 
 
 def view_saved_tasks():
@@ -160,7 +154,7 @@ def view_saved_tasks():
         df = pd.DataFrame(stored_data.get_all_records())
         user_record = df.loc[df['username'] == username].to_string(index=False)
         print(f"{Fore.LIGHTCYAN_EX }{Style.BRIGHT}\n{user_record}\n")
-        print("\nTaking you to the main menu...")    
+        print("\nTaking you to the main menu...")
         welcome_user()
 
 
@@ -188,7 +182,8 @@ def welcome_returning_user():
 
 def new_user():
     """
-       This function will register the new user and send the data to the first column of the Database spreadsheet.
+       This function will register the new user and \
+       \nsend the data to the first column of the Database spreadsheet.
     """
     while True:
         print("\nLet's create a username for you!\n")
@@ -218,12 +213,12 @@ def welcome_screen():
     """
 
 
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 
+print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
 "****************************************************************************")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
         "               Welcome to Carpe Diem Task Manager                    ")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-        "****************************************************************************\n") 
+        "****************************************************************************\n")
 print("In this system you can better organize yourself")
 print("by listing all the tasks you need to do.\n")
 
@@ -245,5 +240,3 @@ while True:
 
 
 welcome_screen()
-
-
