@@ -57,7 +57,7 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 
 ## Code
 
-* [The WebShala Youtube channel](https://www.youtube.com/watch?v=J8QbjXdVl9c&list=PLJAFEg3vkcQN6NGwzI0KX_ZC6dLQjkfeU) - the code of this project comes mainly from this tutorial on Youtube from The WebShala channel. I decided to choose The WebShala tutorial over the inspirations mentioned below as I could follow the Youtube tutorial and understand every step and also because they taught how to use questions and options randomly.  
+* [GitHub Mortgage Calculator](https://github.com/frankiesanjana/mortgage-calculator/) - This code was developed having as a main inspiration this repository. I borrowed some of the code from this repository to help create the task manager, to save the user, send the tasks to the spreadsheet, retrieve it, etc. I have also customized the code to achieve the project goals.  
 
 * [Simple Personality Quiz](https://github.com/edubz99/Simple-Personality-Quiz) - this repository was also among my initial inspirations for the quiz. 
 

@@ -177,7 +177,8 @@ def welcome_returning_user():
             break
         else:
             print(Fore.LIGHTYELLOW_EX +
-                  "\nUsername not found, please try again.")
+                  "\nUsername not found, please try again,\
+                    \n or type 'n' to create a new username:")          
 
 
 def new_user():
