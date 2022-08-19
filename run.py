@@ -135,7 +135,11 @@ def delete_task():
               "\nWe found the task in our database.\n")
     print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
               "\nLet's delete it.\n")      
-    print(row)
+    database = SHEET.worksheet('database')
+    database.delete_rows(row)
+    print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+Great {username}, Your task was deleted from Carpe Diem Task Manager.\n")
+
 
 def view_saved_tasks():
     """
