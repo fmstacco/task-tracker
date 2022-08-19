@@ -28,6 +28,7 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 * [Gitpod](https://www.gitpod.io/) - as the IDE for the application.
 * [Google Cloud](https://cloud.google.com/) - to create a project for the API.
 * [Google Sheets](https://www.google.co.uk/sheets/about/) - to store a database for the users tasks.
+* [Heroku](https://www.heroku.com/) to deploy the project.
 * [Lucid Charts](https://www.lucidchart.com/) - to create the flow chart.
 * [PEP8](http://pep8online.com/) - for testing and validating the code.
 * [W3C HTML Validator](https://validator.w3.org/) - to validate the HTML.
@@ -38,9 +39,6 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 * [gspread](https://developers.google.com/sheets/api) - to link the database spreadsheet with Google Sheets.
 * [google.oauth2.service_account](https://google-auth.readthedocs.io/en/stable/index.html) to import credentials and access to Google service accounts.
 * [pandas](https://pypi.org/project/pandas/) - to display the tasks saved in a table format.
-
-
-
 
 # Credits 
 
