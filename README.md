@@ -19,6 +19,29 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
     * [**Code**](<#code>)
 *  [**Acknowledgements**](<#acknowledgements>)
 
+
+# Technologies Used
+
+* [Python](https://docs.python.org/3/contents.html) - the main language of the application.
+* [Gitbash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) - to push changes to the GitHub repository.
+* [GitHub](https://github.com/) - to host the repositories.
+* [Gitpod](https://www.gitpod.io/) - as the IDE for the application.
+* [Google Cloud](https://cloud.google.com/) - to create a project for the API.
+* [Google Sheets](https://www.google.co.uk/sheets/about/) - to store a database for the users tasks.
+* [Lucid Charts](https://www.lucidchart.com/) - to create the flow chart.
+* [PEP8](http://pep8online.com/) - for testing and validating the code.
+* [W3C HTML Validator](https://validator.w3.org/) - to validate the HTML.
+
+### Python Libraries
+
+* [colorama](https://pypi.org/project/colorama/) to print text to the terminal in different colours and styles.
+* [gspread](https://developers.google.com/sheets/api) - to link the database spreadsheet with Google Sheets.
+* [google.oauth2.service_account](https://google-auth.readthedocs.io/en/stable/index.html) to import credentials and access to Google service accounts.
+* [pandas](https://pypi.org/project/pandas/) - to display the tasks saved in a table format.
+
+
+
+
 # Credits 
 
 * [Alura](https://www.alura.com.br/) to reinforce learning on Python.
