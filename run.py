@@ -94,7 +94,6 @@ def add_new_task():
 Lets add a task to your to do list.\n")
         print("First lets create a task task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
-        
         task_code = input("\nTask code: \n")
         todays_date = input("\nToday's date: \n")
         task_description = input("\nNew task: \n")
@@ -123,15 +122,15 @@ def delete_task():
         print("Type the task code you want to delete,\
             \nor type 'm' to return to the main menu:\n")
         code_delete = input("task code: \n")
-        if code_delete== 'm' or code_delete == 'M':
+        if code_delete == 'm' or code_delete == 'M':
             welcome_user()
             break
         elif stored_data.find(code_delete, in_column=2):
             row = stored_data.find(code_delete, in_column=2).row
             print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-                "\nWe found the task in our database.\n")
+                  "\nWe found the task in our database.\n")
             print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-                "\nLet's delete it.\n")
+                  "\nLet's delete it.\n")
             database = SHEET.worksheet('database')
             database.delete_rows(row)
             print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
@@ -141,7 +140,7 @@ Great {username}, Your task was deleted from Carpe Diem Task Manager.\n")
             break
         else:
             print(Fore.LIGHTYELLOW_EX +
-                    "\nTask not found, please try again.")
+                  "\nTask not found, please try again.")
 
 
 def view_saved_tasks():
@@ -178,7 +177,7 @@ def welcome_returning_user():
         else:
             print(Fore.LIGHTYELLOW_EX +
                   "\nUsername not found, please try again,\
-                    \n or type 'n' to create a new username:")          
+                    \n or type 'n' to create a new username:")
 
 
 def new_user():
@@ -215,11 +214,11 @@ def welcome_screen():
 
 
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-"****************************************************************************")
+      "****************************************************************************")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-        "               Welcome to Carpe Diem Task Manager                    ")
+      "               Welcome to Carpe Diem Task Manager                    ")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-        "****************************************************************************\n")
+      "****************************************************************************\n")
 print("In this system you can better organize yourself")
 print("by listing all the tasks you need to do.\n")
 
