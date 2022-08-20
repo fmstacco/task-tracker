@@ -59,13 +59,17 @@ The aim of this project is to deliver a command line interface task manager so t
 ## Future Features
 
 
-### Testing
+## Testing
+
+### PEP8 validator 
+
+![PEP8 Validator test result](assets/images/readme/pep8-result.jpg)
 
 ### Fixed bugs: 
 
 During the testing process, some minor errors were displayed when validating Python on PEP8, which were quickly corrected. 
     
-    ![PEP8](assets/images/readme/bugs-fixed-pep8.jpg)
+![PEP8](assets/images/readme/bugs-fixed-pep8.jpg)
 
 ### Unfixed bugs: 
 
