@@ -175,11 +175,9 @@ Help on cloning a repository from GitHub can be found [here](https://docs.github
 * [Create a Task Tracker](https://www.youtube.com/watch?v=ynd67UwG_cI&t=351s) - inspired me to structure my project.
 
 
-
-
 ## Code
 
-* [GitHub Mortgage Calculator](https://github.com/frankiesanjana/mortgage-calculator/) - This code was developed having as a main inspiration this repository. I borrowed some of the code from this repository to help create the task manager, to save the user, send the tasks to the spreadsheet, retrieve it, etc. I have also customized the code to achieve the project goals.  
+* [GitHub Mortgage Calculator](https://github.com/frankiesanjana/mortgage-calculator/) - Carpe Diem Task Manager code was developed having as a main inspiration this repository. I borrowed some of the code from the Mortgage calculator repository to help create the task manager, to save the user, send the tasks to the spreadsheet, retrieve it, etc. I have also customized the code to achieve the project goals.  
 
 * [Simple Personality Quiz](https://github.com/edubz99/Simple-Personality-Quiz) - this repository was also among my initial inspirations for the quiz. 
 
@@ -193,7 +191,7 @@ Help on cloning a repository from GitHub can be found [here](https://docs.github
 
 # Acknowledgements
 
-Carpe Diem Task Manager was designed and developed for Portfolio 3 project, a requirement of Full Stack Software Developer Diploma Course (Eccommerce) at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), my Cohort facilitator [Kenan Wright](https://se.linkedin.com/in/kenan-wright-bb0359b8), my Cohort colleagues, the Slack community and the Student care for all encouragement and, support during this journey. I am also thankful to the ***Mayo, Sligo and Leitrim Education Training Board (msletb)*** for this opportunity. I  would also like to say thank you to my family, my husband Michel and, my children, Alanna, and Peter who is just 5 months old at the time of this project submission. 
+Carpe Diem Task Manager was designed and developed for Portfolio 3 project, a requirement of Full Stack Software Developer Diploma Course (Eccommerce) at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), my Cohort facilitator [Kenan Wright](https://se.linkedin.com/in/kenan-wright-bb0359b8), my Cohort colleagues, the Slack community, the Tutor Support and the Student care for all support during this journey. I am also thankful to the ***Mayo, Sligo and Leitrim Education Training Board (msletb)*** for this opportunity. I  would also like to say thank you to my family, my husband Michel and, my children, Alanna, and Peter who is just 5 months old at the time of this project submission. 
 
 Fabiana Tacco (2022)
 
