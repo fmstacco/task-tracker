@@ -81,7 +81,7 @@ Goodbye {username}. We're looking forward to seeing you again!.")
             print(f"{Fore.LIGHTYELLOW_EX}{Style.BRIGHT}\n\
 Press the button 'Run Task Tracker' to go back to the system.")
         break
-
+            
 
 def add_new_task():
     """
@@ -97,25 +97,30 @@ Lets add a task to your to do list.\n")
         print("First lets create a task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
         task_code = input("\nTask code: \n")
-        todays_date = input("\nToday's date: \n")
-        task_description = input("\nNew task: \n")
-        due_date = input("\nDue Date: \n")
-        print("\nType the status of your task \
-            \n [1] to do \
-            \n [2] doing \
-            \n [3] done\n")
-        status = input("Status: \n")
-        list_details = [
-            username, task_code, todays_date,
-            task_description, due_date, status]
-        print("Saving your task on the database...\n")
-        database = SHEET.worksheet('database')
-        database.append_row(list_details)
-        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
-Great {username}, Your task was added to Carpe Diem Task Manager.\n")
-        print("\nLets see your saved tasks...")
-        view_saved_tasks()
-        break
+        if task_code == "":
+            print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
+        else:
+           break
+            
+
+    while True:
+            print("\nType the status of your task \
+                \n [1] to do \
+                \n [2] doing \
+                \n [3] done\n")
+            
+            status_task = input("Status: \n")
+            
+            if status_task == "1" or status_task == "2" or status_task ==3:
+                list_details = [
+            username, task_code, status_task]
+                print("Saving your task on the database...\n")
+                database = SHEET.worksheet('database')
+                database.append_row(list_details)
+                break  
+            else:
+                print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
+                         
 
 
 def delete_task():
@@ -123,7 +128,7 @@ def delete_task():
     Allows the user to delete a saved task.
     """
     while True:
-        print(Fore.LIGHTBLUE_EX + Style.BRIGHT +"Please, type the task code you want to delete,\
+        print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "Please, type the task code you want to delete,\
             \nor type 'm' to return to the main menu:\n")
         code_delete = input("task code: \n")
         if code_delete == 'm' or code_delete == 'M':
@@ -165,8 +170,10 @@ def welcome_returning_user():
     """
        Welcome screen for returning users
     """
-    print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "\nWelcome back! Please enter your username,")
-    print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "or type 'n' to create a new username:")
+    print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
+          "\nWelcome back! Please enter your username,")
+    print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
+          "or type 'n' to create a new username:")
     while True:
         global username
         username = input("\nEnter your username here:\n")
@@ -190,7 +197,8 @@ def new_user():
        \nsend the data to the first column of the Database spreadsheet.
     """
     while True:
-        print(Fore.LIGHTBLUE_EX + Style.BRIGHT +"\nLet's create a username for you!\n")
+        print(Fore.LIGHTBLUE_EX+Style.BRIGHT +
+              "\nLet's create a username for you!\n")
         print("Usernames must be between 2 and 10 characters,")
         print("and should contain only letters from a to z.\n")
 
