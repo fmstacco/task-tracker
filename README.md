@@ -20,6 +20,11 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 *  [**Acknowledgements**](<#acknowledgements>)
 
 
+# Objective 
+
+The aim of this project is to deliver a command line interface task manager so the user can track their to do list. 
+
+
 # Technologies Used
 
 * [Python](https://docs.python.org/3/contents.html) - the main language of the application.

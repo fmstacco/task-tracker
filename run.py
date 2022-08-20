@@ -13,7 +13,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
-from datetime import datetime
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
@@ -95,11 +94,8 @@ def add_new_task():
 Lets add a task to your to do list.\n")
         print("First lets create a task task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
+        
         task_code = input("\nTask code: \n")
-
-        if task_code == "":
-            print(Fore.LIGHTYELLOW_EX + "Please, type a task code.\n")
-
         todays_date = input("\nToday's date: \n")
         task_description = input("\nNew task: \n")
         due_date = input("\nDue Date: \n")
@@ -107,7 +103,7 @@ Lets add a task to your to do list.\n")
             \n [1] to do \
             \n [2] doing \
             \n [3] done\n")
-        status = input("\nStatus: \n")
+        status = input("Status: \n")
         list_details = [username, task_code, todays_date, task_description, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
@@ -125,9 +121,9 @@ def delete_task():
     """
     while True:
         print("Type the task code you want to delete,\
-        \nor type 'm' to return to the main menu:\n")
+            \nor type 'm' to return to the main menu:\n")
         code_delete = input("task code: \n")
-        if code_delete == 'm' or code_delete == 'M':
+        if code_delete== 'm' or code_delete == 'M':
             welcome_user()
             break
         elif stored_data.find(code_delete, in_column=2):
