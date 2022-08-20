@@ -51,8 +51,14 @@ The aim of this project is to deliver a command line interface task manager so t
 
 ![Task Manager Flowchart](/assets/images/readme/flowchart-task-tracker.png)
 
-
 [Back to top](<#contents>)
+
+## Features
+
+
+
+
+## Future Features
 
 
 
@@ -68,6 +74,34 @@ The aim of this project is to deliver a command line interface task manager so t
 * [Lucid Charts](https://www.lucidchart.com/) - to create the flow chart.
 * [PEP8](http://pep8online.com/) - for testing and validating the code.
 * [W3C HTML Validator](https://validator.w3.org/) - to validate the HTML.
+
+
+# Deployment
+
+### **This application was deployed using [Heroku](https://www.heroku.com/):**
+
+To deploy using Heroku, the steps below need to be followed:
+
+1. Ensure your requirements.txt file has the required dependencies. To do this you can use the following code in your IDE:
+    > pip3 freeze > requirements.txt
+    - Heroku will use this file to import the dependencies that are required.
+3. Create or Login to your Heroku account.
+4. Navigate to Dashboard. 
+5. Click "New" and select "create new app" from the drop-down menu. This is found in the upper right portion of the window. 
+6. Provide a unique name for your application and select your region.
+7. Click "Create App".
+
+![New app image](assets/images/readme/new-app.jpg)
+
+### Setting up the App within Heroku
+
+1. Navigate to "Settings" and scroll down to "build packs".
+2. Click "build packs" and then click both "python" and "node.js"(node.js is needed for the Code Institute mock terminal.)
+3. Ensure that the python buildpack is above the node.js buildpack, You can click and drag the packs to re-arrange them.
+
+![Heroku Buildpack](assets/images/readme/buildpacks.jpg)
+![Config Vars](assets/images/readme/config-vars.jpg)
+
 
 ### Python Libraries
 
