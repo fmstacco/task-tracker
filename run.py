@@ -14,7 +14,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 SCOPE = [
@@ -223,6 +223,9 @@ print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
       "******************************************************************\n")
 print("In this system you can better organize yourself")
 print("by listing all the tasks you need to do.\n")
+print("You will be able to create a username, add tasks,")
+print("delete tasks, view saved tasks and also returning to the system.\n")
+
 
 while True:
     print("To get started, please choose an option below:\n")

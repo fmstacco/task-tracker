@@ -71,12 +71,17 @@ During the testing process, some minor errors were displayed when validating Pyt
     
 ![PEP8](assets/images/readme/bugs-fixed-pep8.jpg)
 
-### Unfixed bugs: 
+### Testing User Stories
 
-During the testing process, some minor errors were displayed when validating Python on PEP8, which were quickly corrected. 
+| Expectation                         | Result                          |
+| :---------------------------------: | :------------------------------:|
+| As a new user I want to easily understand how to use the system and how it can help me.| .|
+| As a new user or returning visitor, I want to be able to easily navigate the system through the command line. | .|
+| As a new user I want to be able to create a unique username, add tasks to the system, view saved tasks as well as delete tasks.|. |
+| As a visitor returning, I want to be able to access the system through a unique username, add new tasks, retrieve previously saved tasks, as well as delete tasks.| . |
+| As a new user or returning visitor, I want to be able to close the system easily when I finish using it.| .|
 
-    ![PEP8](assets/images/readme/bugs-unfixed-pep8.jpg)
-
+[Back to top](<#contents>)
 
 # Technologies Used
 
