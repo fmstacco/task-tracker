@@ -97,6 +97,7 @@ This is the Google Sheets database, where the data is stored and communicating w
 
 <img src="./assets/images/readme/database-google-sheets.jpg" alt="Database Google Sheets screen">
 
+[Back to top](<#contents>)
 
 ## Future Features
 
@@ -110,6 +111,7 @@ The Carpe Diem Task Manager can be improved in the future through new features t
 
 **Typing function** - a typing function/library to slow down the time the text is printed on the screen. It can be improved for a better user experience UX/UI.
 
+[Back to top](<#contents>)
 
 ## Testing
 
@@ -122,6 +124,23 @@ The Carpe Diem Task Manager can be improved in the future through new features t
 During the testing process, some minor errors were displayed when validating Python on PEP8, which were quickly corrected. 
     
 ![PEP8](assets/images/readme/bugs-fixed-pep8.jpg)
+
+### Manual testing
+
+  * Manual Testing
+
+| Feature            |  Expect                           |  Result              |
+| ------------------ | --------------------------------- | ---------------------|
+| Run Task Tracker   |  Display welcome screen           |         Pass         | 
+| New user press [1] |  Display welcome new user menu    |         Pass         |
+| Returning user [2] |  Display returning user menu      |         Pass         |
+|  Invalid input     |  Message input is not valid       |         Pass         |
+|  Add new task      |  Requests inputs to be filled     |         Pass         | 
+|  Delete task       |  Requests task code to delete     |          Pass        | 
+| Delete task sheets |  Delete task on google shets      |          Pass        |
+|  Save task         |  Save task on google shets        |          Pass        |
+
+
 
 ### Testing User Stories
 
@@ -147,6 +166,7 @@ During the testing process, some minor errors were displayed when validating Pyt
 * [Lucid Charts](https://www.lucidchart.com/) - to create the flow chart.
 * [PEP8](http://pep8online.com/) - for testing and validating the code.
 
+[Back to top](<#contents>)
 
 # Deployment
 
