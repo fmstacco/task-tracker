@@ -90,37 +90,60 @@ def add_new_task():
      via the terminal, which must be 4 strings separated
      by commas. The loop will repeatedly request data, until it is valid.
     """
-
-    while True:
-        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
+    print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 Lets add a task to your to do list.\n")
-        print("First lets create a task code: 'todays date + time' \
+    print("First lets create a task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
+    while True:
         task_code = input("\nTask code: \n")
-        if task_code == "":
-            print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
+        if task_code == "" or task_code == "  " or len(task_code) < 3:
+            print(Fore.LIGHTYELLOW_EX + "Please, type a task code ex. 'todays date + time''1708221517'.\n")
         else:
            break
-            
 
     while True:
-            print("\nType the status of your task \
+        todays_date = input("\nToday's date: \n")
+        if todays_date == "" or todays_date == "  " or len(todays_date) < 6:
+            print(Fore.LIGHTYELLOW_EX + "Please, type the todays date eg. 17/08/22.\n")
+        else:
+            break          
+
+    while True:
+        task_description = input("\nNew task: \n")
+        if task_description == "" or task_description == "  " or len(task_description) < 3:
+            print(Fore.LIGHTYELLOW_EX + "Please, type a description.\n")
+        else:
+           break
+
+    while True:
+        due_date = input("\nDue Date: \n")
+        if due_date == "" or due_date == "  " or len(due_date) < 6:
+            print(Fore.LIGHTYELLOW_EX + "Please, type a due date 20/08/22.\n")
+        else:
+           break         
+
+    while True:
+        print("\nType the status of your task \
                 \n [1] to do \
                 \n [2] doing \
                 \n [3] done\n")
             
-            status_task = input("Status: \n")
+        status_task = input("Status: \n")
             
-            if status_task == "1" or status_task == "2" or status_task ==3:
+        if status_task == "1" or status_task == "2" or status_task =="3":
                 list_details = [
-            username, task_code, status_task]
+                username, task_code, todays_date,
+                task_description, due_date, status_task]
                 print("Saving your task on the database...\n")
                 database = SHEET.worksheet('database')
                 database.append_row(list_details)
-                break  
-            else:
-                print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")
-                         
+                print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
+Great {username}, Your task was added to Carpe Diem Task Manager.\n")
+                print("\nLets see your saved tasks...")
+                view_saved_tasks()
+                break
+        else:
+                print(Fore.LIGHTYELLOW_EX + "Please, select a valid option.\n")         
 
 
 def delete_task():
