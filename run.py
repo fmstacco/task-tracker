@@ -35,7 +35,7 @@ def welcome_new_user():
     Main menu for the task manager
     """
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 Hello {username}, Welcome to Carpe Diem Task Manager!\n")
         print("Please choose an option below:\n")
         print("Type '1' to add a new task.")
@@ -58,7 +58,7 @@ def welcome_user():
     Main menu for the task manager
     """
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 {username}, please choose an option below\n")
         print("Type '1' to add a new task.")
         print("Type '2' to view your saved tasks.")
@@ -78,7 +78,9 @@ def welcome_user():
         elif answer == "4":
             print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\n\
 Goodbye {username}. We're looking forward to seeing you again!.")
-            break
+            print(f"{Fore.LIGHTYELLOW_EX}{Style.BRIGHT}\n\
+Press the button 'Run Task Tracker' to go back to the system.")
+        break
 
 
 def add_new_task():
@@ -90,9 +92,9 @@ def add_new_task():
     """
 
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 Lets add a task to your to do list.\n")
-        print("First lets create a task task code: 'todays date + time' \
+        print("First lets create a task code: 'todays date + time' \
             \nexample: '17/08/22 3:17pm', type: '1708221517': \n")
         task_code = input("\nTask code: \n")
         todays_date = input("\nToday's date: \n")
@@ -109,7 +111,7 @@ Lets add a task to your to do list.\n")
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
         database.append_row(list_details)
-        print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
+        print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 Great {username}, Your task was added to Carpe Diem Task Manager.\n")
         print("\nLets see your saved tasks...")
         view_saved_tasks()
@@ -121,7 +123,7 @@ def delete_task():
     Allows the user to delete a saved task.
     """
     while True:
-        print("Type the task code you want to delete,\
+        print(Fore.LIGHTBLUE_EX + Style.BRIGHT +"Please, type the task code you want to delete,\
             \nor type 'm' to return to the main menu:\n")
         code_delete = input("task code: \n")
         if code_delete == 'm' or code_delete == 'M':
@@ -129,14 +131,14 @@ def delete_task():
             break
         elif stored_data.find(code_delete, in_column=2):
             row = stored_data.find(code_delete, in_column=2).row
-            print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+            print(Fore.LIGHTRED_EX + Style.BRIGHT +
                   "\nWe found the task in our database.\n")
-            print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+            print(Fore.LIGHTYELLOW_EX + Style.BRIGHT +
                   "\nLet's delete it.\n")
             database = SHEET.worksheet('database')
             database.delete_rows(row)
             print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}\n\
-Great {username}, Your task was deleted from Carpe Diem Task Manager.\n")
+Great {username}, Your task was deleted from Carpe Diem Task Manager.")
             print("\nTaking you to the main menu...")
             welcome_user()
             break
@@ -150,11 +152,11 @@ def view_saved_tasks():
     Allows the user to see the saved tasks.
     """
     if stored_data.find(username, in_column=1):
-        print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+        print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
               "\nThe tasks you currently have saved are:\n")
         df = pd.DataFrame(stored_data.get_all_records())
         user_record = df.loc[df['username'] == username].to_string(index=False)
-        print(f"{Fore.LIGHTCYAN_EX }{Style.BRIGHT}\n{user_record}\n")
+        print(f"{Fore.LIGHTYELLOW_EX }{Style.BRIGHT}\n{user_record}\n")
         print("\nTaking you to the main menu...")
         welcome_user()
 
@@ -163,8 +165,8 @@ def welcome_returning_user():
     """
        Welcome screen for returning users
     """
-    print("\nWelcome back! Please enter your username,")
-    print("or type 'n' to create a new username:")
+    print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "\nWelcome back! Please enter your username,")
+    print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "or type 'n' to create a new username:")
     while True:
         global username
         username = input("\nEnter your username here:\n")
@@ -188,7 +190,7 @@ def new_user():
        \nsend the data to the first column of the Database spreadsheet.
     """
     while True:
-        print("\nLet's create a username for you!\n")
+        print(Fore.LIGHTBLUE_EX + Style.BRIGHT +"\nLet's create a username for you!\n")
         print("Usernames must be between 2 and 10 characters,")
         print("and should contain only letters from a to z.\n")
 
@@ -215,11 +217,11 @@ def welcome_screen():
     """
 
 
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
       "******************************************************************")
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
       "               Welcome to Carpe Diem Task Manager                    ")
-print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
+print(Fore.LIGHTBLUE_EX + Style.BRIGHT +
       "******************************************************************\n")
 print("In this system you can better organize yourself")
 print("by listing all the tasks you need to do.\n")
