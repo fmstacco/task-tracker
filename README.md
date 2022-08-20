@@ -67,15 +67,15 @@ On this screen the user is asked to create a username:
 
 This is the screen that the user will see if the username choosen is already taken:
 
-<img src="./assets/images/readme/username-already-taken.jpg" width="100%" height="100%" alt="Username already taken">
+<img src="./assets/images/readme/username-already-taken.jpg" alt="Username already taken">
 
 This is the welcome screen for the new user:
 
-<img src="./assets/images/readme/welcome-screen-new-user.jpg" width="100%" height="100%" alt="Welcome screen new user">
+<img src="./assets/images/readme/welcome-screen-new-user.jpg" alt="Welcome screen new user">
 
 This is the welcome screen for the returning user:
 
-<img src="./assets/images/readme/welcome-screen-new-user.jpg" width="100%" height="100%" alt="Welcome screen returning user">
+<img src="./assets/images/readme/welcome-screen-returning-user.jpg" alt="Welcome screen returning user">
 
 
 
