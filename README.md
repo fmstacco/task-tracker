@@ -93,6 +93,10 @@ This is the screen to exit the system, when typed [4] to exit the task manager:
 
 <img src="./assets/images/readme/exit-system.jpg" alt="Exit the task manager screen">
 
+This is the Google Sheets database, where the data is stored and communicating with the task manager system.
+
+<img src="./assets/images/readme/database-google-sheets.jpg" alt="Database Google Sheets screen">
+
 
 ## Future Features
 
