@@ -103,7 +103,9 @@ Lets add a task to your to do list.\n")
             \n [2] doing \
             \n [3] done\n")
         status = input("Status: \n")
-        list_details = [username, task_code, todays_date, task_description, due_date, status]
+        list_details = [
+            username, task_code, todays_date,
+            task_description, due_date, status]
         print("Saving your task on the database...\n")
         database = SHEET.worksheet('database')
         database.append_row(list_details)
@@ -214,11 +216,11 @@ def welcome_screen():
 
 
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-      "****************************************************************************")
+      "******************************************************************")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
       "               Welcome to Carpe Diem Task Manager                    ")
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT +
-      "****************************************************************************\n")
+      "******************************************************************\n")
 print("In this system you can better organize yourself")
 print("by listing all the tasks you need to do.\n")
 
