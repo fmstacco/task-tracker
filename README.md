@@ -1,6 +1,6 @@
 # **Carpe Diem Task Manager - Project Portfolio 3 - Python**
 
-Carpe Diem Task Manager is a tool that helps people organize and monitor the tasks that need to be done in different aspects of life, for example, family, studies, work, etc.. 
+Carpe Diem Task Manager is a simple tool that helps people organize and track the tasks that need to be done in different aspects of life, for example, family, studies, work, etc.. 
 
 Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/" target="_blank">Carpe Diem Task Manager</a>
 
@@ -10,6 +10,7 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 * [**User Experience UX**](<#user-experience-ux>)
     * [Target Audience](<#target-audience>)
     * [User Stories](<#user-stories>)
+    * [Owner Stories](<#owner-stories>)
 * [**Features**](<#features>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -37,6 +38,12 @@ The aim of this project is to deliver a command line interface task manager so t
 * As a new user I want to be able to create a unique username, add tasks to the system, view saved tasks as well as delete tasks.
 * As a visitor returning, I want to be able to access the system through a unique username, add new tasks, retrieve previously saved tasks, as well as delete tasks.
 * As a new user or returning visitor, I want to be able to close the system easily when I finish using it.
+
+## Owner Stories
+
+* As the owner, I want to offer a system that is easy to use for both the new user and a visitor returning, and helps the user better organize what needs to be done in their daily lives.
+* As the owner, I want to ensure that the data entered is correct, valid and stored safely.
+
 
 [Back to top](<#contents>)
 
