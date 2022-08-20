@@ -2,10 +2,12 @@
 # By Fabiana Martins de Souza Tacco
 # https://github.com/fmstacco/
 
-"""This code was developed having as a main inspiration the following \
-\nrepository: https://github.com/frankiesanjana/mortgage-calculator.\
-\nI borrowed some of the code from this repository to help create the task\
-\nmanager.I have also customized some of the code to achieve the project goals.
+"""
+Carpe Diem Task Manager code was developed having as a main inspiration the\
+\following repository: https://github.com/frankiesanjana/mortgage-calculator.\
+\I borrowed some of the code from Mortgage calculator repository to help \
+\create the task manager.
+I have also customized some of the code to achieve the project goals.
 """
 
 # imports
@@ -32,7 +34,8 @@ stored_data = SHEET.worksheet('database')
 
 def welcome_new_user():
     """
-    Main menu for the task manager
+    Welcome screen for the new user displaying a option to\
+        add a new task or exist the system.
     """
     while True:
         print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
@@ -86,9 +89,9 @@ Press the button 'Run Task Tracker' to go back to the system.")
 def add_new_task():
     """
      Add a new task to the database.
-     Run a while loop to add a valid string of data from the user
-     via the terminal, which must be 4 strings separated
-     by commas. The loop will repeatedly request data, until it is valid.
+     Run a while loop to add valid strings of data from the user
+     via the terminal and send it to google sheets.
+     The loop will repeatedly request data, until it is valid.
     """
     print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}\n\
 Lets add a task to your to do list.\n")
@@ -217,7 +220,8 @@ def welcome_returning_user():
 def new_user():
     """
        This function will register the new user and \
-       \nsend the data to the first column of the Database spreadsheet.
+       \will check if the user is already registered\
+        on the database spreadsheet.
     """
     while True:
         print(Fore.LIGHTBLUE_EX+Style.BRIGHT +
