@@ -55,6 +55,21 @@ The aim of this project is to deliver a command line interface task manager so t
 
 ## Features
 
+### Welcome Screen
+
+This is the welcome screen:
+
+<img src="./assets/images/readme/welcome-screen.jpg" width="100%" height="100%" alt="Welcome Screen">
+
+On this screen the user is asked to create a username:
+
+<img src="./assets/images/readme/create-username.jpg" width="100%" height="100%" alt="Create a username">
+
+This is the screen that the user will see if the username choosen is already taken:
+
+<img src="./assets/images/readme/username-already-taken.jpg" width="100%" height="100%" alt="Username already taken">
+
+
 
 ## Future Features
 
