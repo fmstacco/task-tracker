@@ -24,6 +24,11 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
 
 The aim of this project is to deliver a command line interface task manager so the user can track their to do list. 
 
+# User Experience (UX)
+
+## Target Audience
+
+* Anyone who wants to track and manage all the tasks that need to be done.
 
 # Technologies Used
 
