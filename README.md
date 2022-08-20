@@ -11,6 +11,7 @@ Welcome to the live site here: <a href="https://pp3-task-tracker.herokuapp.com/"
     * [Target Audience](<#target-audience>)
     * [User Stories](<#user-stories>)
     * [Owner Stories](<#owner-stories>)
+    * [Flow Chart](<#flowchart>)
 * [**Features**](<#features>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -43,6 +44,12 @@ The aim of this project is to deliver a command line interface task manager so t
 
 * As the owner, I want to offer a system that is easy to use for both the new user and a visitor returning, and helps the user better organize what needs to be done in their daily lives.
 * As the owner, I want to ensure that the data entered is correct, valid and stored safely.
+
+[Back to top](<#contents>)
+
+## Flowchart
+
+![Task Manager Flowchart](/assets/images/readme/flowchart-task-tracker.png.png)
 
 
 [Back to top](<#contents>)
