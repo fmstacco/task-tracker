@@ -69,6 +69,15 @@ This is the screen that the user will see if the username choosen is already tak
 
 <img src="./assets/images/readme/username-already-taken.jpg" width="100%" height="100%" alt="Username already taken">
 
+This is the welcome screen for the new user:
+
+<img src="./assets/images/readme/welcome-screen-new-user.jpg" width="100%" height="100%" alt="Welcome screen new user">
+
+This is the welcome screen for the returning user:
+
+<img src="./assets/images/readme/welcome-screen-new-user.jpg" width="100%" height="100%" alt="Welcome screen returning user">
+
+
 
 
 ## Future Features
