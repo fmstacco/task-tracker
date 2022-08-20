@@ -91,7 +91,7 @@ This is the screen to delete tasks, when typed [3] View your saved tasks:
 
 This is the screen to exit the system, when typed [4] to exit the task manager:
 
-<img src="./assets/images/readme/delete_task.jpg" alt="Exit the task manager screen">
+<img src="./assets/images/readme/exit-system.jpg" alt="Exit the task manager screen">
 
 
 ## Future Features
@@ -123,11 +123,11 @@ During the testing process, some minor errors were displayed when validating Pyt
 
 | Expectation                         | Result                          |
 | :---------------------------------: | :------------------------------:|
-| As a new user I want to easily understand how to use the system and how it can help me.| .|
-| As a new user or returning visitor, I want to be able to easily navigate the system through the command line. | .|
-| As a new user I want to be able to create a unique username, add tasks to the system, view saved tasks as well as delete tasks.|. |
-| As a visitor returning, I want to be able to access the system through a unique username, add new tasks, retrieve previously saved tasks, as well as delete tasks.| . |
-| As a new user or returning visitor, I want to be able to close the system easily when I finish using it.| .|
+| As a new user I want to easily understand how to use the system and how it can help me.| The user can understand the system through the welcome screen.|
+| As a new user or returning visitor, I want to be able to easily navigate the system through the command line. |There user can navegate easily through the input buttons and options.|
+| As a new user I want to be able to create a unique username, add tasks to the system, save tasks as well as delete tasks.|The user can create a unique username, add, save and also remove tasks from the system. |
+| As a visitor returning, I want to be able to access the system through a unique username, add new tasks, retrieve previously saved tasks, as well as delete tasks.| The returning user can retrieve saved tasks, and also is able to add new tasks and also remove tasks from the system. |
+| As a new user or returning visitor, I want to be able to close the system easily when I finish using it.|The users can exit the system easily through the main menu .|
 
 [Back to top](<#contents>)
 
