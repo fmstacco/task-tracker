@@ -127,8 +127,6 @@ During the testing process, some minor errors were displayed when validating Pyt
 
 ### Manual testing
 
-  * Manual Testing
-
 The Carpe Diem Task Manager system has been econtinuously tested both on the Gitpod terminal and the Heroku deployed version on the browser. 
 All tests made aimed to achieve the best user experience in system navigation, as well as the validity of data collected and stored on Google Sheets. 
 So that the user can follow an intuitive and easy flow at all system contact points.
@@ -263,28 +261,27 @@ Help on cloning a repository from GitHub can be found [here](https://docs.github
 
 # Credits 
 
+
 * [Alura](https://www.alura.com.br/) to reinforce learning on Python.
 
 * [Code Institute Python Project template](https://github.com/Code-Institute-Org/python-essentials-template-v1) - the framework for this project.
 
-* [Youtube Gustavo Guanabara](https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6) - to reinforce learning on Python.
+* [Create a Task Tracker](https://www.youtube.com/watch?v=ynd67UwG_cI&t=351s) - inspired me to structure my project.
+
+* [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-make-a-todo-list-cli-application-using-python/amp/) - inspired me to structure my project and decide which path I would follow.
+
+* [GitHub Mortgage Calculator](https://github.com/frankiesanjana/mortgage-calculator/) - Carpe Diem Task Manager code was developed having as a main inspiration this repository. I borrowed some of the code from the Mortgage calculator repository to help create the task manager, to save the user, send the tasks to the spreadsheet, retrieve it, etc. I have also customized the code to achieve the project goals. 
+
+* [Love Sandwiches](https://github.com/fmstacco/love-sandwiches/blob/main/run.py) - great walkthrough which inspired to structure my project. 
+
+* [Mortgage calculator](https://github.com/frankiesanjana/mortgage-calculator), [Escape the Cave](https://github.com/roomacarthur/escape-the-cave), [Loadsheet Planner](https://github.com/EwanColquhoun/loadsheet-planner/) - I learned a lot from these Project Portfolios and these inspired me on structure my README and understand some concepts. 
 
 * [Personalized task manager in Python](https://www.geeksforgeeks.org/personalized-task-manager-in-python/) - inspired me to structure my project.
 
-* [Create a Task Tracker](https://www.youtube.com/watch?v=ynd67UwG_cI&t=351s) - inspired me to structure my project.
+* [Youtube Gustavo Guanabara](https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6) - to reinforce learning on Python.
 
+* [Youtube Dev Aprender](https://www.youtube.com/watch?v=3UGMtv0Vn40) - inspired me to structure my project and decide which path I would follow.
 
-## Code
-
-* [GitHub Mortgage Calculator](https://github.com/frankiesanjana/mortgage-calculator/) - Carpe Diem Task Manager code was developed having as a main inspiration this repository. I borrowed some of the code from the Mortgage calculator repository to help create the task manager, to save the user, send the tasks to the spreadsheet, retrieve it, etc. I have also customized the code to achieve the project goals.  
-
-* [Simple Personality Quiz](https://github.com/edubz99/Simple-Personality-Quiz) - this repository was also among my initial inspirations for the quiz. 
-
-* [Youtube Code Feature](https://www.youtube.com/watch?v=XnH56whHQqw) - this tutorial was my first inspiration for the quiz. I even deployed the walkthrough I have done following this tutorial. However, I ended up choosing the WebShala tutorial, as this one uses the HTML as a database for the questions, not a separated file on JavaScript. 
-
-* [Sweet Alert](https://sweetalert.js.org/) - the code for the alert for the unsuccessful form submission.
-
-* [EmailJS](https://www.emailjs.com) - the code to make the form effective for submitting potential clients' data to my email.  
 
 [Back to top](<#contents>)
 
