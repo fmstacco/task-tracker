@@ -73,12 +73,11 @@ The aim of this project is to deliver a command line interface task manager so t
 * [Heroku](https://www.heroku.com/) to deploy the project.
 * [Lucid Charts](https://www.lucidchart.com/) - to create the flow chart.
 * [PEP8](http://pep8online.com/) - for testing and validating the code.
-* [W3C HTML Validator](https://validator.w3.org/) - to validate the HTML.
 
 
 # Deployment
 
-### **This application was deployed using [Heroku](https://www.heroku.com/):**
+This application was deployed using [Heroku](https://www.heroku.com/):
 
 To deploy using Heroku, the steps below need to be followed:
 
