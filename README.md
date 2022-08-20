@@ -129,17 +129,23 @@ During the testing process, some minor errors were displayed when validating Pyt
 
   * Manual Testing
 
+The Carpe Diem Task Manager system has been econtinuously tested both on the Gitpod terminal and the Heroku deployed version on the browser. 
+All tests made aimed to achieve the best user experience in system navigation, as well as the validity of data collected and stored on Google Sheets. 
+So that the user can follow an intuitive and easy flow at all system contact points.
+Below are some examples of features tested manually.  
+
 | Feature            |  Expect                           |  Result              |
 | ------------------ | --------------------------------- | ---------------------|
 | Run Task Tracker   |  Display welcome screen           |         Pass         | 
 | New user press [1] |  Display welcome new user menu    |         Pass         |
 | Returning user [2] |  Display returning user menu      |         Pass         |
-|  Invalid input     |  Message input is not valid       |         Pass         |
+|  Invalid inputs    |  Messages inputs not valid        |         Pass         |
 |  Add new task      |  Requests inputs to be filled     |         Pass         | 
-|  Delete task       |  Requests task code to delete     |          Pass        | 
-| Delete task sheets |  Delete task on google shets      |          Pass        |
-|  Save task         |  Save task on google shets        |          Pass        |
-
+|  Store task sheets |  Add task on google shets         |         Pass         | 
+|  Delete task       |  Requests task code to delete     |         Pass         | 
+| Delete task sheets |  Delete task on google shets      |         Pass         |
+|  Save task         |  Show saved tasks/Retrieve sheets |         Pass         |
+|  Exit screen       |  Display end screen when typed [4]|         Pass         |
 
 
 ### Testing User Stories
