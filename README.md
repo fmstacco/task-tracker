@@ -71,21 +71,40 @@ This is the screen that the user will see if the username choosen is already tak
 
 This is the welcome screen for the new user, when typed [1] Create a new task list:
 
-<img src="./assets/images/readme/welcome-screen-new-user.jpg" alt="Welcome screen new user">
+<img src="./assets/images/readme/welcome-screen-new-user.jpg" alt="Welcome screen new user screen">
 
 This is the welcome screen for the returning user, when typed [2] Access a saved task list:
 
-<img src="./assets/images/readme/welcome-screen-returning-user.jpg" alt="Welcome screen returning user">
+<img src="./assets/images/readme/welcome-screen-returning-user.jpg" alt="Welcome screen returning user screen">
 
 This is the screen to add a new task, when typed [1] Add a new task:
 
-<img src="./assets/images/readme/add_new_task.jpg" alt="Add a newtask">
+<img src="./assets/images/readme/add_new_task.jpg" alt="Add a newtask screen">
 
 This is the screen to view saved tasks, when typed [2] View your saved tasks:
 
-<img src="./assets/images/readme/saved_tasks.jpg" alt="View saved tasks">
+<img src="./assets/images/readme/saved_tasks.jpg" alt="View saved tasks screen">
+
+This is the screen to delete tasks, when typed [3] View your saved tasks:
+
+<img src="./assets/images/readme/delete_task.jpg" alt="Delete a task screen">
+
+This is the screen to exit the system, when typed [4] to exit the task manager:
+
+<img src="./assets/images/readme/delete_task.jpg" alt="Exit the task manager screen">
+
 
 ## Future Features
+
+The Carpe Diem Task Manager can be improved in the future through new features to be developed and implemented:
+
+**Update task Status** - A ***update task status feature*** is crucial so the user can update the task when completed. Due to time contrains it could not be developed.
+
+**Color design** - a better ***color design*** and combinations to improve the user experience. 
+
+**Login** - for future development it would be nice to have a ***signup and login with password*** feature in order to have a secure way to access the system. 
+
+**Typing function** - a typing function/library to slow down the time the text is printed on the screen. It can be improved for a better user experience UX/UI.
 
 
 ## Testing
