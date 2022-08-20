@@ -7,7 +7,7 @@ Carpe Diem Task Manager code was developed having as a main inspiration the\
 \following repository: https://github.com/frankiesanjana/mortgage-calculator.\
 \I borrowed some of the code from Mortgage calculator repository to help \
 \create the task manager.
-I have also customized some of the code to achieve the project goals.
+I have also customized the code to achieve the project goals.
 """
 
 # imports
