@@ -49,7 +49,7 @@ The aim of this project is to deliver a command line interface task manager so t
 
 ## Flowchart
 
-![Task Manager Flowchart](/assets/images/readme/flowchart-task-tracker.png.png)
+![Task Manager Flowchart](/assets/images/readme/flowchart-task-tracker.png)
 
 
 [Back to top](<#contents>)
