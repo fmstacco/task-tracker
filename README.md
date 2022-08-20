@@ -102,7 +102,18 @@ To deploy using Heroku, the steps below need to be followed:
 ![Heroku Buildpack](assets/images/readme/buildpacks.jpg)
 ![Config Vars](assets/images/readme/config-vars.jpg)
 
+### App Deployment
 
+1. Navigate to the "Deploy" section.
+2. Scroll down to "Deployment Method" and select "GitHub".
+3. Authorise the connection of Heroku to GitHub.
+4. Search for your GitHub repository name, and select the correct repository.
+5. For Deployment there are two options, Automatic Deployments or Manual.
+    - Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
+    - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so. 
+6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire.
+
+![Heroku deployment](assets/images/readme/deployment.jpg)
 
 
 ### **To fork this repository on GitHub**
