@@ -59,26 +59,31 @@ The aim of this project is to deliver a command line interface task manager so t
 
 This is the welcome screen:
 
-<img src="./assets/images/readme/welcome-screen.jpg" width="100%" height="100%" alt="Welcome Screen">
+<img src="./assets/images/readme/welcome-screen.jpg"  alt="Welcome Screen">
 
 On this screen the user is asked to create a username:
 
-<img src="./assets/images/readme/create-username.jpg" width="100%" height="100%" alt="Create a username">
+<img src="./assets/images/readme/create-username.jpg"  alt="Create a username">
 
 This is the screen that the user will see if the username choosen is already taken:
 
 <img src="./assets/images/readme/username-already-taken.jpg" alt="Username already taken">
 
-This is the welcome screen for the new user:
+This is the welcome screen for the new user, when typed [1] Create a new task list:
 
 <img src="./assets/images/readme/welcome-screen-new-user.jpg" alt="Welcome screen new user">
 
-This is the welcome screen for the returning user:
+This is the welcome screen for the returning user, when typed [2] Access a saved task list:
 
 <img src="./assets/images/readme/welcome-screen-returning-user.jpg" alt="Welcome screen returning user">
 
+This is the screen to add a new task, when typed [1] Add a new task:
 
+<img src="./assets/images/readme/add_new_task.jpg" alt="Add a newtask">
 
+This is the screen to view saved tasks, when typed [2] View your saved tasks:
+
+<img src="./assets/images/readme/saved_tasks.jpg" alt="View saved tasks">
 
 ## Future Features
 
